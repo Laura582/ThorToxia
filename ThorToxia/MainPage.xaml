@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ThorToxia.MainPage"
-             xmlns:viewmodel="clr-namespace:ThorToxia.ViewModel"
-             x:DataType="viewmodel:MainViewModel">
+             xmlns:searchHandler ="clr-namespace:ThorToxia.SearchHandler"
+             xmlns:viewmodel="clr-namespace:ThorToxia.Models"
+             x:Class="ThorToxia.MainPage">
 
     <Grid RowDefinitions="100, Auto, *"
           ColumnDefinitions=".75*, .25*"
@@ -15,14 +15,7 @@
                Source="thor.png"
                Background="Transparent"/>
 
-        <SearchBar Placeholder="Search items..."
-               Grid.Row="1"/>
-
-        <Button Text="Search"
-                Grid.Row="1"
-                Grid.Column="1"/>
-
-        <CollectionView Grid.Row="2" Grid.ColumnSpan="2">
+                <CollectionView Grid.Row="2" Grid.ColumnSpan="2">
             
             <CollectionView.ItemTemplate>
                 <DataTemplate>
